@@ -33,7 +33,7 @@ function DSA() {
           }`}
           onClick={handleToggle}
         >
-          <p className="w-3/4">
+          <div className="w-3/4">
             <p className="text-lg font-medium">{currentQuestion?.question}</p>
 
             <p className="font-semibold text-base my-1">Explanation:</p>
@@ -50,7 +50,7 @@ function DSA() {
             <p className="font-mono text-sm bg-slate-700 w-fit px-4 py-1 text-white rounded-xl">
               {currentQuestion?.output}
             </p>
-          </p>
+          </div>
 
           <span className="transform transition-all duration-300 text-lg hover:text-blue-700 self-end flex justify-center items-center gap-2 font-medium">
             Reveal {isOpen ? <TfiAngleDoubleUp /> : <TfiAngleDoubleDown />}
@@ -62,25 +62,25 @@ function DSA() {
           }`}
         >
           <div className="p-4 bg-white">
-            <p className="font-semibold text-base my-1">C++:</p>
-            <p className="font-mono text-sm bg-slate-700 w-fit px-4 py-1 text-white rounded-xl">
-              <pre>{currentQuestion?.cpp}</pre>
-            </p>
-
-            <p className="font-semibold text-base my-1">Java:</p>
-            <p className="font-mono text-sm bg-slate-700 w-fit px-4 py-1 text-white rounded-xl">
-              <pre>{currentQuestion?.java}</pre>
-            </p>
-
-            <p className="font-semibold text-base my-1">Python:</p>
-            <p className="font-mono text-sm bg-slate-700 w-fit px-4 py-1 text-white rounded-xl">
-              <pre>{currentQuestion?.python}</pre>
-            </p>
-
             <p className="font-semibold text-base my-1">Explanation of Code:</p>
             <p className="font-mono text-sm bg-slate-700 w-fit px-4 py-1 text-white rounded-xl">
               {currentQuestion?.explanation_code}
             </p>
+
+            <p className="font-semibold text-base my-1">C++:</p>
+            <div className="font-mono text-sm bg-slate-700 w-fit px-4 py-1 text-white rounded-xl">
+              <pre>{currentQuestion?.cpp}</pre>
+            </div>
+
+            <p className="font-semibold text-base my-1">Java:</p>
+            <div className="font-mono text-sm bg-slate-700 w-fit px-4 py-1 text-white rounded-xl">
+              <pre>{currentQuestion?.java}</pre>
+            </div>
+
+            <p className="font-semibold text-base my-1">Python:</p>
+            <div className="font-mono text-sm bg-slate-700 w-fit px-4 py-1 text-white rounded-xl">
+              <pre>{currentQuestion?.python}</pre>
+            </div>
           </div>
         </div>
       </div>

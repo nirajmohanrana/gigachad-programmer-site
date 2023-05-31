@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 
 import dsaBasic from "../assets/dsa_basic.json";
 import dsaInter from "../assets/dsa_inter.json";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { TfiControlBackward, TfiControlForward } from "react-icons/tfi";
 
 function DSAList() {
-  const navigate = useNavigate();
-
   const handleClickScroll = (idName) => {
     const element = document.getElementById(idName);
     if (element) {
@@ -63,25 +61,25 @@ function DSAList() {
           />
         </p>
       </h1>
-
-      {dsaBasic.questions.map((question, key) => {
-        return (
-          <Link key={key} to={`/dsa/${question?.question}`}>
-            <div className="px-4 text-lg py-3 m-5 rounded-md border border-slate-700 shadow-lg">
-              <p className="font-extrabold text-blue-500 -m-1">
-                {key + 1 + "."}
-              </p>
-              <p className="font-semibold">{question?.question}</p>
-              <p className="font-semibold"></p>
-              <p className="font-semibold text-base my-1">Explanation:</p>
-              <p className="font-mono text-sm bg-slate-700 w-fit px-4 py-2 text-white rounded-xl">
-                {question?.explanation}
-              </p>
-            </div>
-          </Link>
-        );
-      })}
-
+      <div className="px-5">
+        {dsaBasic.questions.map((question, key) => {
+          return (
+            <Link key={key} to={`/dsa/${question?.question}`}>
+              <div className="px-4 text-lg py-3 my-4 rounded-md border border-slate-700 shadow-lg">
+                <p className="font-extrabold text-blue-500 -m-1">
+                  {key + 1 + "."}
+                </p>
+                <p className="font-semibold">{question?.question}</p>
+                <p className="font-semibold"></p>
+                <p className="font-semibold text-base my-1">Explanation:</p>
+                <p className="font-mono text-sm bg-slate-700 w-fit px-4 py-2 text-white rounded-xl">
+                  {question?.explanation}
+                </p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
       <h1
         id="inter"
         className="text-lg font-semibold mx-5 pl-2 my-3 flex justify-between items-center"
