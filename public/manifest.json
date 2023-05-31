@@ -1,0 +1,25 @@
+{
+  "short_name": "GigaChad Programmer",
+  "name": "Website for GigaChad Programmer Discord Server",
+  "icons": [
+    {
+      "src": "icon-100x100.webp",
+      "sizes": "100x100",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-100x100.webp",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "icon-100x100.webp",
+      "type": "image/png",
+      "sizes": "100x100"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
